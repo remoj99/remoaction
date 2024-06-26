@@ -1,5 +1,5 @@
 import { Request, Response } from 'express-serve-static-core';
-import { validationResult } from 'express-validator';
+import { matchedData, validationResult } from 'express-validator';
 
 import { cartDto, createUserDto } from '../dtos/CreateUser.dto';
 import { CreateUserQueryParams } from '../types/query-params';
@@ -54,7 +54,8 @@ export function createUser(
 
   if (!result.isEmpty()) return response.status(400).send({ errors: result.array() });
 
-  //const data = matchedData(request); // get all the data that has been validated
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const data = matchedData(request); // get all the data that has been validated
 
   request.query.loginAfterCreate;
   request.params.id;
