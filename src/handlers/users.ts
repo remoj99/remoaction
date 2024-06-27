@@ -53,7 +53,6 @@ export function createUser(
   result.isEmpty();
 
   if (!result.isEmpty()) return response.status(400).send({ errors: result.array() });
-
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const data = matchedData(request); // get all the data that has been validated
 
