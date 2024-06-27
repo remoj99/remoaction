@@ -14,6 +14,7 @@ describe('/api/users', () => {
   it('shoutld return an empty array when getting /api/users', async () => {
     const response = await request(app).get('/api/users');
     console.log(response.body);
+    console.log("hi");
     console.log(response.headers);
     expect(response.body).toStrictEqual([]);
   });
