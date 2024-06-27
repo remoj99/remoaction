@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --testPathPattern=src/__tests__ --detectOpenHandles",
-    "test:e2e": "jest --testPathPattern=src/e2e ",
+    "test": "jest --detectOpenHandles",
+    "test:e2e": "jest --testPathPattern=src/e2e --detectOpenHandles",
     "build": "tsc --build",
     "start": "node ./dist/index.js",
     "start:dev": "nodemon --files ./src/index.ts",
