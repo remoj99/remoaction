@@ -6,7 +6,6 @@ import { CreateUserQueryParams } from '../types/query-params';
 
 export function getUsers(request: Request, response: Response) {
   const result = validationResult(request);
-  console.log("hi");
   // console.log(request.sessionID)
   // request.session.username = "jason"
   // request.sessionStore.get(request.sessionID, (err, sessionData) => {
